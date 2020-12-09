@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+
+	<head>
+		<meta charset = "UTF-8">
+		<title>Manage dormitory</title>
+		<style>
+			body {
+				margin: 0;
+				margin-top: 0;
+			}
+			* {
+			  box-sizing: border-box;
+			}
+			
+			/* Create two equal columns that floats next to each other */
+			.column {
+			  float: left;
+			  width: 80%;
+			  padding: 10px; 
+			  height: 100%;/* Should be removed. Only for demonstration */
+			}
+			
+			/* Clear floats after the columns */
+			.row:after {
+			  content: "";
+			  display: table;
+			  clear: both;
+			}
+			.btn {
+			  border: none;
+			  background-color: inherit;
+			  padding: 14px 28px;
+			  font-size: 16px;
+			  cursor: pointer;
+			  display: inline-block;
+			  margin-top: 8px;
+			  margin-left: 32px;
+			}
+			
+			.btn:hover {background: #eee;}
+			
+			table {
+			  font-family: arial, sans-serif;
+			  border-collapse: collapse;
+			  width: 100%;
+			}
+			
+			td, th {
+			  border: 1px solid #dddddd;
+			  text-align: left;
+			  padding: 8px;
+			}
+			
+			tr:nth-child(even) {
+			  background-color: #dddddd;
+			}
+			
+		</style>
+	</head>
+	
+	<body>
+		<h1 
+			style="margin:0; 
+			color:rgb(255, 255, 255); 
+			background-color: rgb(0, 140, 255);
+			padding: 16px;
+			text-align: center;
+			">
+			Manage dormitory
+		</h1>
+		
+		<div class="row">
+		  <div class="column" 
+		  	style="background-color:#aaa;
+		  	width: 200px;">
+<!--		    <h2>Column 1</h2>
+		    <p>Some text..</p>
+		    
+		    <form method="post" th:action="@{/phongs}">
+				<button>Thêm mới phòng</button>
+			</form>
+			
+			<form method="get" th:action="@{/phongs}">
+				<button>Danh sách phòng</button>
+			</form>
+			-->
+			
+			<button class="btn home">Trang chủ</button>
+			<button class="btn student">Sinh viên</button>
+			<button class="btn room">Phòng</button>
+			<button class="btn service">Dịch vụ</button>
+			<button class="btn vexe">Vé xe</button>
+			<button class="btn guest">Khách</button>
+			
+		  </div>
+		  
+		  <div class="column" style="background-color:#ffffff;">
+		    <h2>Trang chủ</h2>
+		    <label for="fname">Nhập từ khóa muốn tìm kiếm:</label><br>
+  			<input type="text" 
+  				id="fname" 
+  				name="fname" 
+  				style="margin-top: 8px">
+  			<input type="submit" value="Tìm kiếm" style="margin-top: 8px">
+  			<input type="submit" value="Thêm mới" 
+  				style="float: right;
+  					padding: 8px;
+  					background-color: rgb(0, 140, 255);
+  					color: white">
+  					
+			<table style="margin-top: 32px">
+			  <tr>
+			    <th>Mã sinh viên</th>
+			    <th>Họ tên</th>
+			    <th>Sinh nhật</th>
+			  </tr>
+			  
+			  <tr>
+			    <td>B17DCCN183</td>
+			    <td>Đỗ Trường Giang</td>
+			    <td>11/09/1999</td>
+			  </tr>
+			  			  
+			  <tr>
+			    <td>B17DCCN183</td>
+			    <td>Đỗ Trường Giang</td>
+			    <td>11/09/1999</td>
+			  </tr>
+			  			  
+			  <tr>
+			    <td>B17DCCN183</td>
+			    <td>Đỗ Trường Giang</td>
+			    <td>11/09/1999</td>
+			  </tr>
+			  			  
+			  <tr>
+			    <td>B17DCCN183</td>
+			    <td>Đỗ Trường Giang</td>
+			    <td>11/09/1999</td>
+			  </tr>
+			  	  
+			  <tr>
+			    <td>B17DCCN183</td>
+			    <td>Đỗ Trường Giang</td>
+			    <td>11/09/1999</td>
+			  </tr>
+			  			  
+			  <tr>
+			    <td>B17DCCN183</td>
+			    <td>Đỗ Trường Giang</td>
+			    <td>11/09/1999</td>
+			  </tr>
+			  			  
+			  <tr>
+			    <td>B17DCCN183</td>
+			    <td>Đỗ Trường Giang</td>
+			    <td>11/09/1999</td>
+			  </tr>
+			  			  
+			  <tr>
+			    <td>B17DCCN183</td>
+			    <td>Đỗ Trường Giang</td>
+			    <td>11/09/1999</td>
+			  </tr>
+			  		  
+			  <tr>
+			    <td>B17DCCN183</td>
+			    <td>Đỗ Trường Giang</td>
+			    <td>11/09/1999</td>
+			  </tr>
+			  			  
+			  <tr>
+			    <td>B17DCCN183</td>
+			    <td>Đỗ Trường Giang</td>
+			    <td>11/09/1999</td>
+			  </tr>
+			  			  
+			  <tr>
+			    <td>B17DCCN183</td>
+			    <td>Đỗ Trường Giang</td>
+			    <td>11/09/1999</td>
+			  </tr>
+			  			  
+			  <tr>
+			    <td>B17DCCN183</td>
+			    <td>Đỗ Trường Giang</td>
+			    <td>11/09/1999</td>
+			  </tr>
+			  
+			</table>
+		  
+		</div>
+		
+		
+	</body>
+</html>
